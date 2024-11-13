@@ -4,7 +4,7 @@ import Header from '@components/header/Header';
 import Navbar from '@components/navbar/Navbar';
 import About from '@pages/about/About';
 import FollowUs from '@pages/follow-us/FollowUs';
-import Home from '@pages/home/Home';
+import Home from '@pages/homepage/Home';
 import OurBrands from '@pages/our-brands/OurBrands';
 import Team from '@pages/team/Team';
 import Vision from '@pages/vision/Vision';
