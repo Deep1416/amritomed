@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/header/Header';
 import Navbar from './components/navbar/Navbar';
-import Home from './pages/home/Home';
+import Home from './pages/home/Home.tsx';
 import About from './pages/about/About';
 import WhatWeDo from './pages/what-we-do/WhatWeDo';
 import Team from './pages/team/Team';
@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <section id="what we do">
           <WhatWeDo />
         </section>
-        <section id="team">
+        <section id="our team">
           <Team />
         </section>
         <section id="goals">
