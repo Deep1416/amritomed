@@ -4,7 +4,7 @@ import Image from '../../components/image/Image';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-white container mx-auto px-6 py-10">
+    <div className="bg-white container mx-auto px-6 py-16">
       <h2 className="text-3xl font-bold text-center mb-5">About Us</h2>
       <h2 className="text-xl font-medium text-center mb-5">
         A caring and integrated pharmaceutical company.
@@ -18,7 +18,7 @@ const About: React.FC = () => {
           expertise of pharma marketing with twenty and more years
         </p>
 
-        <Image src={about} alt="About Us" />
+        <Image src={about} alt="About Us image" />
       </div>
     </div>
   );

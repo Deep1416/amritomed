@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Products: React.FC = () => {
+const OurBrands: React.FC = () => {
   return (
     <div className="container mx-auto px-6 py-20 bg-white">
       <h2 className="text-3xl font-bold text-center mb-12">Our Brands</h2>
@@ -25,4 +25,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
+export default OurBrands;

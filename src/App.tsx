@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import Header from './components/header/Header';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-import Home from './pages/Home/Home';
+import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Vision from './pages/vision/Vision';
-import Products from './pages/products/Products';
-import ContactUs from './pages/contact/ContactUs';
 import Team from './pages/team/Team';
+import OurBrands from './pages/our-brands/OurBrands';
+import FollowUs from './pages/follow-us/FollowUs';
+import WhatWeDo from './pages/what-we-do/WhatWeDo';
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,17 +28,20 @@ const App: React.FC = () => {
         <section id="about">
           <About />
         </section>
+        <section id="what we do">
+          <WhatWeDo />
+        </section>
         <section id="team">
           <Team />
         </section>
-        <section id="vision">
+        <section id="goals">
           <Vision />
         </section>
-        <section id="products">
-          <Products />
+        <section id="follow us">
+          <FollowUs />
         </section>
-        <section id="contact">
-          <ContactUs />
+        <section id="our brands">
+          <OurBrands />
         </section>
         <Footer />
       </div>

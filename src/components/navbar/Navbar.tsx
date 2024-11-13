@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { PiPhoneDisconnect } from 'react-icons/pi';
 import { RiInformationLine } from 'react-icons/ri';
 import { GoGoal } from 'react-icons/go';
 import { FaHandHoldingMedical } from 'react-icons/fa';
 import { FaHouseMedical } from 'react-icons/fa6';
 import { RiTeamLine } from 'react-icons/ri';
+import { SlUserFollow } from 'react-icons/sl';
 
 type MenuItem = {
   name: string;
@@ -14,10 +14,11 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   { name: 'home', icon: <FaHouseMedical size={20} /> },
   { name: 'about', icon: <RiInformationLine size={20} /> },
+  { name: 'what we do', icon: <RiTeamLine size={20} /> },
   { name: 'team', icon: <RiTeamLine size={20} /> },
-  { name: 'vision', icon: <GoGoal size={20} /> },
-  { name: 'products', icon: <FaHandHoldingMedical size={20} /> },
-  { name: 'contact', icon: <PiPhoneDisconnect size={20} /> },
+  { name: 'goals', icon: <GoGoal size={20} /> },
+  { name: 'follow us', icon: <SlUserFollow size={20} /> },
+  { name: 'our brands', icon: <FaHandHoldingMedical size={20} /> },
 ];
 
 const Navbar: React.FC<{
@@ -73,10 +74,15 @@ const Navbar: React.FC<{
               activeSection === item.name
                 ? 'text-blue-400 font-semibold'
                 : 'text-gray-300 hover:text-white'
-            } flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-32'}`}
+            } flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-36'}`}
           >
             <div>{item.icon}</div>
-            {!isOpen && <span>{item.name}</span>}
+
+            <span
+              className={`transition-all duration-300 ${isOpen ? 'hidden' : ''}`}
+            >
+              {item.name}
+            </span>
           </button>
         ))}
       </div>

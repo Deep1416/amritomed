@@ -2,18 +2,21 @@ import { ITeamData } from '../team/teamData';
 
 export const visionData: ITeamData[] = [
   {
-    title: 'Focus to Care',
-    description:
-      'Therapeutic solutions for patients with diverse medical needs at affordable prices.',
+    title: 'EMPLOYEE',
+    description: `Constantly looking for new ways to improve themselves and
+contribute more to the working. They listen, take feedback seriously and
+are open-minded when presented with new ideas. They aren't afraid to ask
+questions and seek help when needed.`,
   },
   {
-    title: 'Innovation',
-    description:
-      'Constantly creating new products and innovative ideas to improve healthcare.',
+    title: 'VISION',
+    description: `Therapeutic solutions for patients with diverse medical needs at
+affordable price and work towards human welfare by producing and
+delivering innovative products for their health and wellness.`,
   },
   {
-    title: 'Digital First',
+    title: 'MISSION',
     description:
-      'Digitalization is integral to our organization and underpins every process.',
+      'Providing effective affordable and accessible medicines. Ensure employee personal protection.',
   },
 ];
