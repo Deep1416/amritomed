@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from '../../components/image/Image';
-import mission from '../../assets/mission.png';
+import Image from '@components/image/Image';
+import mission from '@assets/mission.png';
 import { visionData } from './visionData';
-import Cards from '../../components/cards/Cards';
+import Cards from '@components/cards/Cards';
 
 const Vision: React.FC = () => {
   return (

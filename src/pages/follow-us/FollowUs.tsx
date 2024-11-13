@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from '../../components/image/Image';
-import followUs from '../../assets/followUs.png';
+import Image from '@components/image/Image';
+import followUs from '@assets/followUs.png';
 
 const FollowUs: React.FC = () => {
   return (

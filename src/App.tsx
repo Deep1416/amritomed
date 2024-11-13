@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import Header from './components/header/Header';
-import Navbar from './components/navbar/Navbar';
-import Home from './pages/home/Home.tsx';
-import About from './pages/about/About';
-import WhatWeDo from './pages/what-we-do/WhatWeDo';
-import Team from './pages/team/Team';
-import Vision from './pages/vision/Vision';
-import FollowUs from './pages/follow-us/FollowUs';
-import OurBrands from './pages/our-brands/OurBrands';
-import Footer from './components/footer/Footer';
+import Footer from '@components/footer/Footer';
+import Header from '@components/header/Header';
+import Navbar from '@components/navbar/Navbar';
+import About from '@pages/about/About';
+import FollowUs from '@pages/follow-us/FollowUs';
+import Home from '@pages/home/Home';
+import OurBrands from '@pages/our-brands/OurBrands';
+import Team from '@pages/team/Team';
+import Vision from '@pages/vision/Vision';
+import WhatWeDo from '@pages/what-we-do/WhatWeDo';
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from '../../components/image/Image';
-import mission from '../../assets/mission.png';
+import Image from '@components/image/Image';
+import mission from '@assets/mission.png';
 
 const WhatWeDo: React.FC = () => {
   return (

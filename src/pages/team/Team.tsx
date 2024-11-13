@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from '../../components/image/Image';
-import team from '../../assets/team.png';
+import Image from '@components/image/Image';
+import team from '@assets/team.png';
 import { teamData } from './teamData';
-import Cards from '../../components/cards/Cards';
+import Cards from '@components/cards/Cards';
 
 const Team: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '../../assets/logo.png';
-import landing from '../../assets/landing.png';
-import Image from '../../components/image/Image';
+import logo from '@assets/logo.png';
+import landing from '@assets/landing.png';
+import Image from '@components/image/Image';
 
 const Home: React.FC = () => {
   return (
