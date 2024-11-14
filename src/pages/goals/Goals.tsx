@@ -9,8 +9,8 @@ const Goals: React.FC = () => {
   return (
     <ContainerWrapper title="Goals">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
-        {goalsData.map(({ title, description }, index) => (
-          <Cards key={index} title={title} description={description} />
+        {goalsData.map(({ id, title, description }, index) => (
+          <Cards key={index} id={id} title={title} description={description} />
         ))}
       </div>
       <Image src={mission} alt="Mission Image" />
