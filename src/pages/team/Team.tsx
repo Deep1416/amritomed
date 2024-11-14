@@ -3,13 +3,11 @@ import Image from '@components/image/Image';
 import team from '@assets/team.png';
 import { teamData } from './teamData';
 import Cards from '@components/cards/Cards';
+import ContainerWrapper from '@components/wrappers/ContainerWrapper';
 
 const Team: React.FC = () => {
   return (
-    <div className="bg-white container mx-auto px-4 sm:px-6 md:px-10 py-16 text-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
-        Our Team
-      </h2>
+    <ContainerWrapper title="Our team">
       <div>
         <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed mb-10 px-2 sm:px-10">
           We work hard with a happy heart, we will be able to get very close to
@@ -23,7 +21,7 @@ const Team: React.FC = () => {
         </div>
         <Image src={team} alt="Our team image" />
       </div>
-    </div>
+    </ContainerWrapper>
   );
 };
 export default Team;

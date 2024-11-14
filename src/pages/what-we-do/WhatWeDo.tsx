@@ -1,13 +1,11 @@
 import React from 'react';
 import Image from '@components/image/Image';
 import about from '@assets/about.png';
+import ContainerWrapper from '@components/wrappers/ContainerWrapper';
 
 const WhatWeDo: React.FC = () => {
   return (
-    <div className="bg-white container mx-auto px-4 sm:px-6 md:px-10 py-16 text-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
-        WHAT WE DO
-      </h2>
+    <ContainerWrapper title="What We Do">
       <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-5">
         Focus to care
       </h3>
@@ -28,7 +26,7 @@ const WhatWeDo: React.FC = () => {
         </p>
         <Image src={about} alt="What we do image" />
       </div>
-    </div>
+    </ContainerWrapper>
   );
 };
 

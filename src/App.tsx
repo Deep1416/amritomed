@@ -9,9 +9,11 @@ import OurBrands from '@pages/our-brands/OurBrands';
 import Team from '@pages/team/Team';
 import WhatWeDo from '@pages/what-we-do/WhatWeDo';
 import Goals from '@pages/goals/Goals';
+import useWindowDimensions from '@hooks/useWindowDimensions';
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { width } = useWindowDimensions();
 
   return (
     <div className="min-h-screen w-full">
@@ -20,7 +22,7 @@ const App: React.FC = () => {
         <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
       </div>
       <div
-        className={`flex-1 pt-24 transition-all duration-300 ease-in-out mx-auto ${isOpen ? 'pl-4 sm:pl-16' : 'pl-12 sm:pl-48'}`}
+        className={`flex-1 pt-24 transition-all duration-300 ease-in-out mx-auto ${width > 430 ? (isOpen ? 'pl-4 sm:pl-16' : 'pl-12 sm:pl-48') : 'px-5'}`}
       >
         <section id="home">
           <Home />

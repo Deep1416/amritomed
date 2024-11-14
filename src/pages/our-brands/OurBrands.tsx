@@ -1,11 +1,9 @@
+import ContainerWrapper from '@components/wrappers/ContainerWrapper';
 import React from 'react';
 
 const OurBrands: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-10 py-20 bg-white">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
-        Our Brands
-      </h2>
+    <ContainerWrapper title="Our Brands">
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {[
           'AMIGEST',
@@ -25,7 +23,7 @@ const OurBrands: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </ContainerWrapper>
   );
 };
 

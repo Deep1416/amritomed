@@ -1,9 +1,9 @@
+import ContainerWrapper from '@components/wrappers/ContainerWrapper';
 import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-white container mx-auto px-4 sm:px-6 py-16 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold mb-5">About Us</h2>
+    <ContainerWrapper title="About us">
       <h3 className="text-lg md:text-xl font-medium mb-5">
         A caring and integrated pharmaceutical company.
       </h3>
@@ -14,7 +14,7 @@ const About: React.FC = () => {
         specialization. our team is honored with a highly experienced expertise
         of pharma marketing with twenty and more years
       </p>
-    </div>
+    </ContainerWrapper>
   );
 };
 

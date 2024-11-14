@@ -5,11 +5,13 @@ import { GoGoal } from 'react-icons/go';
 import { FaHandHoldingMedical } from 'react-icons/fa';
 import { FaHouseMedical } from 'react-icons/fa6';
 import { SlUserFollow } from 'react-icons/sl';
+import useWindowDimensions from '@hooks/useWindowDimensions';
 
 type MenuItem = {
   name: string;
   icon: React.ReactNode;
 };
+
 const menuItems: MenuItem[] = [
   { name: 'home', icon: <FaHouseMedical size={20} /> },
   { name: 'about', icon: <RiInformationLine size={20} /> },
@@ -25,6 +27,7 @@ const Navbar: React.FC<{
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ isOpen, setIsOpen }) => {
   const [activeSection, setActiveSection] = useState('home');
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,30 +56,24 @@ const Navbar: React.FC<{
 
   return (
     <div
-      className={`h-screen bg-slate-800 text-light shadow-lg ${isOpen ? 'w-16' : 'w-48'} transition-all duration-300 flex flex-col`}
+      className={`bg-slate-800 text-light shadow-lg ${isOpen ? 'w-16' : 'w-48'} transition-all duration-300 flex ${width > 430 ? 'flex-col h-screen items-start px-3 py-2' : 'fixed bottom-0 w-full flex-row justify-around items-center h-16'} space-y-2`}
     >
-      <div className="flex flex-col justify-center items-start px-3 py-2 space-y-2">
+      <button
+        className={`p-2 rounded hover:bg-gray-700 transition-colors ${width > 430 ? '' : 'hidden'}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <FiChevronRight size={24} /> : <FiChevronLeft size={24} />}
+      </button>
+      {menuItems.map((item, index) => (
         <button
-          className="p-2 rounded hover:bg-gray-700 transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
+          key={index}
+          onClick={() => scrollToSection(item.name)}
+          className={`capitalize ${activeSection === item.name ? 'text-blue-400 font-semibold' : 'text-gray-300 hover:text-light'} flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-36'}`}
         >
-          {isOpen ? <FiChevronRight size={24} /> : <FiChevronLeft size={24} />}
+          <div>{item.icon}</div>
+          {!isOpen && width > 430 && <span>{item.name}</span>}
         </button>
-        {menuItems.map((item, index) => (
-          <button
-            key={index}
-            onClick={() => scrollToSection(item.name)}
-            className={`capitalize ${activeSection === item.name ? 'text-blue-400 font-semibold' : 'text-gray-300 hover:text-light'} flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-36'}`}
-          >
-            <div>{item.icon}</div>
-            <span
-              className={`transition-all duration-300 ${isOpen ? 'hidden' : ''}`}
-            >
-              {item.name}
-            </span>
-          </button>
-        ))}
-      </div>
+      ))}
     </div>
   );
 };
