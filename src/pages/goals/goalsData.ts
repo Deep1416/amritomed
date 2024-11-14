@@ -1,6 +1,6 @@
 import { ITeamData } from '../team/teamData';
 
-export const visionData: ITeamData[] = [
+export const goalsData: ITeamData[] = [
   {
     title: 'EMPLOYEE',
     description: `Constantly looking for new ways to improve themselves and

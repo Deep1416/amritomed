@@ -7,8 +7,8 @@ import FollowUs from '@pages/follow-us/FollowUs';
 import Home from '@pages/homepage/Home';
 import OurBrands from '@pages/our-brands/OurBrands';
 import Team from '@pages/team/Team';
-import Vision from '@pages/vision/Vision';
 import WhatWeDo from '@pages/what-we-do/WhatWeDo';
+import Goals from '@pages/goals/Goals';
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const App: React.FC = () => {
           <Team />
         </section>
         <section id="goals">
-          <Vision />
+          <Goals />
         </section>
         <section id="follow us">
           <FollowUs />

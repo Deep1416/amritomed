@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from '@components/image/Image';
-import mission from '@assets/mission.png';
+import about from '@assets/about.png';
 
 const WhatWeDo: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const WhatWeDo: React.FC = () => {
           has more opportunities to grow.
         </p>
 
-        <Image src={mission} alt="What we do image" />
+        <Image src={about} alt="What we do image" />
       </div>
     </div>
   );

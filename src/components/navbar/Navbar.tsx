@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { RiInformationLine } from 'react-icons/ri';
+import { RiInformationLine, RiTeamLine } from 'react-icons/ri';
 import { GoGoal } from 'react-icons/go';
 import { FaHandHoldingMedical } from 'react-icons/fa';
 import { FaHouseMedical } from 'react-icons/fa6';
-import { RiTeamLine } from 'react-icons/ri';
 import { SlUserFollow } from 'react-icons/sl';
 
 type MenuItem = {
@@ -35,7 +34,6 @@ const Navbar: React.FC<{
       sections.forEach((section) => {
         const top = section.offsetTop;
         const height = section.offsetHeight;
-
         if (scrollPosition >= top && scrollPosition < top + height) {
           setActiveSection(section.id);
         }
@@ -55,9 +53,7 @@ const Navbar: React.FC<{
 
   return (
     <div
-      className={`h-screen bg-slate-800 text-white shadow-lg ${
-        isOpen ? 'w-16' : 'w-48'
-      } transition-all duration-300 flex flex-col`}
+      className={`h-screen bg-slate-800 text-light shadow-lg ${isOpen ? 'w-16' : 'w-48'} transition-all duration-300 flex flex-col`}
     >
       <div className="flex flex-col justify-center items-start px-3 py-2 space-y-2">
         <button
@@ -70,14 +66,9 @@ const Navbar: React.FC<{
           <button
             key={index}
             onClick={() => scrollToSection(item.name)}
-            className={`capitalize ${
-              activeSection === item.name
-                ? 'text-blue-400 font-semibold'
-                : 'text-gray-300 hover:text-white'
-            } flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-36'}`}
+            className={`capitalize ${activeSection === item.name ? 'text-blue-400 font-semibold' : 'text-gray-300 hover:text-light'} flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-36'}`}
           >
             <div>{item.icon}</div>
-
             <span
               className={`transition-all duration-300 ${isOpen ? 'hidden' : ''}`}
             >
