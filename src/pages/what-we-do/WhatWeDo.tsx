@@ -4,11 +4,15 @@ import about from '@assets/about.png';
 
 const WhatWeDo: React.FC = () => {
   return (
-    <div className="bg-white container mx-auto px-6 py-16 text-center">
-      <h2 className="text-3xl font-bold text-center mb-5">WHAT WE DO</h2>
-      <h2 className="text-xl font-medium text-center mb-5">Focus to care</h2>
-      <div className="px-10">
-        <p className="text-gray-600 leading-relaxed mb-10 text-lg">
+    <div className="bg-white container mx-auto px-4 sm:px-6 md:px-10 py-16 text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">
+        WHAT WE DO
+      </h2>
+      <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-5">
+        Focus to care
+      </h3>
+      <div>
+        <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed mb-10">
           Amritomed Pharmaceuticals Pvt Ltd aim to build brands that people love
           because they believe elevating human connections is worth reaching
           for. Strong portfolio of brands supports steady organic revenue and
@@ -22,7 +26,6 @@ const WhatWeDo: React.FC = () => {
           innovative, As a result we aim to steps toward GOAL.the organization
           has more opportunities to grow.
         </p>
-
         <Image src={about} alt="What we do image" />
       </div>
     </div>

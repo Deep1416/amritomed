@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MdLightMode, MdOutlineDarkMode } from 'react-icons/md';
 
 const ToggleTheme: React.FC = () => {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -13,7 +14,7 @@ const ToggleTheme: React.FC = () => {
 
   return (
     <button onClick={() => setDarkTheme(!darkTheme)}>
-      {darkTheme ? 'Light' : 'Dark'}
+      {darkTheme ? <MdLightMode size={30} /> : <MdOutlineDarkMode size={30} />}
     </button>
   );
 };

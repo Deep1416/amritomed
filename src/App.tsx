@@ -15,12 +15,12 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full">
-      <div className="fixed w-full">
+      <div className="fixed w-full z-10">
         <Header />
         <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
       </div>
       <div
-        className={`flex-1 pt-24 transition-all duration-300 ease-in-out mx-auto ${isOpen ? 'pl-16' : 'pl-48'}`}
+        className={`flex-1 pt-24 transition-all duration-300 ease-in-out mx-auto ${isOpen ? 'pl-4 sm:pl-16' : 'pl-12 sm:pl-48'}`}
       >
         <section id="home">
           <Home />
