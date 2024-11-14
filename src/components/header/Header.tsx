@@ -9,9 +9,9 @@ const Header: React.FC = () => {
         <img
           src={logo}
           alt="Amritomed Logo"
-          className="w-10 h-10 object-contain"
+          className="w-8 h-8 object-contain rounded-full"
         />
-        <span className="text-xl md:text-3xl font-semibold">AMRITOMED</span>
+        <span className="text-xl md:text-2xl font-medium">AMRITOMED</span>
       </div>
       <div>
         <ToggleTheme />

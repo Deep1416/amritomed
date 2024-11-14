@@ -5,6 +5,7 @@ import { GoGoal } from 'react-icons/go';
 import { FaHandHoldingMedical } from 'react-icons/fa';
 import { FaHouseMedical } from 'react-icons/fa6';
 import { SlUserFollow } from 'react-icons/sl';
+import { TbHeartPlus } from 'react-icons/tb';
 import useWindowDimensions from '@hooks/useWindowDimensions';
 
 type MenuItem = {
@@ -13,13 +14,13 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { name: 'home', icon: <FaHouseMedical size={20} /> },
-  { name: 'about', icon: <RiInformationLine size={20} /> },
-  { name: 'what we do', icon: <RiTeamLine size={20} /> },
-  { name: 'our team', icon: <RiTeamLine size={20} /> },
-  { name: 'goals', icon: <GoGoal size={20} /> },
-  { name: 'follow us', icon: <SlUserFollow size={20} /> },
-  { name: 'our brands', icon: <FaHandHoldingMedical size={20} /> },
+  { name: 'home', icon: <FaHouseMedical size={16} /> },
+  { name: 'about', icon: <RiInformationLine size={16} /> },
+  { name: 'what we do', icon: <TbHeartPlus size={16} /> },
+  { name: 'our team', icon: <RiTeamLine size={16} /> },
+  { name: 'goals', icon: <GoGoal size={16} /> },
+  { name: 'follow us', icon: <SlUserFollow size={16} /> },
+  { name: 'our brands', icon: <FaHandHoldingMedical size={16} /> },
 ];
 
 const Navbar: React.FC<{
@@ -56,22 +57,24 @@ const Navbar: React.FC<{
 
   return (
     <div
-      className={`bg-slate-800 text-light shadow-lg ${isOpen ? 'w-16' : 'w-48'} transition-all duration-300 flex ${width > 430 ? 'flex-col h-screen items-start px-3 py-2' : 'fixed bottom-0 w-full flex-row justify-around items-center h-16'} space-y-2`}
+      className={`bg-slate-800 text-light shadow-lg transition-all duration-300 flex ${isOpen ? 'w-14' : 'w-40'} ${width > 430 ? 'flex-col h-screen items-start px-3 py-2' : 'fixed bottom-0 w-full flex-row justify-around items-center h-16'} space-y-2`}
     >
       <button
-        className={`p-2 rounded hover:bg-gray-700 transition-colors ${width > 430 ? '' : 'hidden'}`}
+        className={`p-1 rounded hover:bg-blue-600 transition-colors ${width > 430 ? '' : 'hidden'}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <FiChevronRight size={24} /> : <FiChevronLeft size={24} />}
+        {isOpen ? <FiChevronRight size={20} /> : <FiChevronLeft size={20} />}
       </button>
       {menuItems.map((item, index) => (
         <button
           key={index}
           onClick={() => scrollToSection(item.name)}
-          className={`capitalize ${activeSection === item.name ? 'text-blue-400 font-semibold' : 'text-gray-300 hover:text-light'} flex items-center justify-start gap-3 p-2 rounded hover:bg-gray-700 transition-colors ${isOpen ? '' : 'w-36'}`}
+          className={`capitalize ${isOpen ? '' : 'w-32'} ${activeSection === item.name ? 'text-blue-400' : 'text-gray-300 hover:text-light'} flex items-center justify-start gap-3 p-2 rounded hover:bg-blue-700 hover:text-light transition-colors`}
         >
-          <div>{item.icon}</div>
-          {!isOpen && width > 430 && <span>{item.name}</span>}
+          {item.icon}
+          {!isOpen && width > 430 && (
+            <span className="text-sm">{item.name}</span>
+          )}
         </button>
       ))}
     </div>

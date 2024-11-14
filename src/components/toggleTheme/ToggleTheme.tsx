@@ -13,7 +13,10 @@ const ToggleTheme: React.FC = () => {
   }, [darkTheme]);
 
   return (
-    <button onClick={() => setDarkTheme(!darkTheme)}>
+    <button
+      onClick={() => setDarkTheme(!darkTheme)}
+      className="transition-all duration-300"
+    >
       {darkTheme ? <MdLightMode size={30} /> : <MdOutlineDarkMode size={30} />}
     </button>
   );

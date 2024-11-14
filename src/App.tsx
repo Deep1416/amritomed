@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
       </div>
       <div
-        className={`flex-1 pt-24 transition-all duration-300 ease-in-out mx-auto ${width > 430 ? (isOpen ? 'pl-4 sm:pl-16' : 'pl-12 sm:pl-48') : 'px-5'}`}
+        className={`flex-1 pt-16 transition-all duration-300 ease-in-out mx-auto ${width > 430 ? (isOpen ? 'pl-4 sm:pl-16' : 'pl-12 sm:pl-48') : 'px-5'}`}
       >
         <section id="home">
           <Home />
