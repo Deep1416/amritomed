@@ -57,10 +57,10 @@ const Navbar: React.FC<{
 
   return (
     <div
-      className={`bg-slate-800 text-light shadow-lg transition-all duration-300 flex ${isOpen ? 'w-14' : 'w-40'} ${width > 430 ? 'flex-col h-screen items-start px-3 py-2' : 'fixed bottom-0 w-full flex-row justify-around items-center h-16'} space-y-2`}
+      className={`bg-slate-800 text-light shadow-lg transition-all duration-300 flex ${width > 640 ? `flex-col h-screen items-start px-3 py-2 ${isOpen ? 'w-14' : 'w-40'}` : 'fixed bottom-0 w-full flex-row justify-around items-center h-16'} space-y-2`}
     >
       <button
-        className={`p-1 rounded hover:bg-blue-600 transition-colors ${width > 430 ? '' : 'hidden'}`}
+        className={`p-1 rounded hover:bg-blue-600 transition-colors ${width > 640 ? '' : 'hidden'}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FiChevronRight size={20} /> : <FiChevronLeft size={20} />}
@@ -69,12 +69,10 @@ const Navbar: React.FC<{
         <button
           key={index}
           onClick={() => scrollToSection(item.name)}
-          className={`capitalize ${isOpen ? '' : 'w-32'} ${activeSection === item.name ? 'text-blue-400' : 'text-gray-300 hover:text-light'} flex items-center justify-start gap-3 p-2 rounded hover:bg-blue-700 hover:text-light transition-colors`}
+          className={`capitalize  ${activeSection === item.name ? 'text-blue-400' : 'text-gray-300 hover:text-light'} flex items-center ${width > 640 ? `justify-start ${isOpen ? '' : 'w-32'}` : 'justify-center'} gap-3 p-2 rounded hover:bg-blue-700 hover:text-light transition-colors`}
         >
           {item.icon}
-          {!isOpen && width > 430 && (
-            <span className="text-sm">{item.name}</span>
-          )}
+          {!isOpen && width > 640 && <span className="text-sm">{item.name}</span>}
         </button>
       ))}
     </div>
